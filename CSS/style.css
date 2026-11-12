@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Kabel-Light";
   src: url("fonts/Kabel-Light.ttf") format("truetype");
   font-weight: 300;
@@ -12,7 +12,7 @@
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Kabel-Light", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   background: #fff;
   color: #000;
@@ -196,7 +196,7 @@ body {
 
 .reviews-body .reviews-banner .the {
   margin: 0;
-  font-family: "Kabel-Light", "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 38px;
   line-height: .9;
@@ -204,7 +204,7 @@ body {
 
 .reviews-body .reviews-banner h1 {
   margin: 0;
-  font-family: "Kabel-Black", "Bowlby One", sans-serif;
+  font-family: "Josefin Sans", "Bowlby One", sans-serif;
   font-weight: 900;
   font-size: clamp(4rem, 10vw, 7.5rem);
   line-height: .95;
@@ -236,7 +236,7 @@ body {
 .reviews-body .review h2 {
   margin: 0 0 10px 8px;
   color: #e52e2c;
-  font-family: "Kabel-Light", "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
   font-weight: 900;
 }
@@ -244,7 +244,7 @@ body {
 .reviews-body .review p {
   margin: 0 8px 14px;
   max-width: 940px;
-  font-family: "Kabel-Light", "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 19px;
   line-height: 1.4;
   font-weight: 300;
