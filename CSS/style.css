@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "Kabel";
+  src: url("fonts/Kabel-Light.woff2") format("woff2"),
+       url("fonts/Kabel-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kabel";
+  src: url("fonts/Kabel-Black.woff2") format("woff2"),
+       url("fonts/Kabel-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  background: #fff;
+  color: #000;
+}
+
+
+.stripes {
+  position: relative;
+  height: 205px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #000 0 14px,
+    #fff 14px 28px
+  );
+}
+
+.logo {
+  position: absolute;
+  left: 16px;
+  bottom: -14px;
+  font-family: "Bowlby One", sans-serif;
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: -3px;
+  color: #b3352f;
+  text-decoration: none;
+  -webkit-text-stroke: 3px #ddd;
+  paint-order: stroke fill;
+  white-space: nowrap;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0 10px 380px;
+  border-bottom: 3px solid #000;
+}
+
+.nav a {
+  font-family: "Bowlby One", sans-serif;
+  font-size: 19px;
+  text-decoration: none;
+  color: #fff;
+  padding: 7px 28px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.nav a:hover {
+  transform: scale(1.08);
+}
+
+.nav .home {
+  background: #7a5fc4;
+}
+
+.nav .about {
+  background: #f7d63c;
+  color: #000;
+}
+
+.nav .reviews {
+  background: #b3352f;
+}
+
+
+.home-body .intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 45px;
+  padding: 55px 30px 40px;
+  min-height: 520px;
+  border-bottom: 3px solid #000;
+}
+
+.home-body .intro-text {
+  flex: 0 0 540px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.home-body .intro-text p.lead {
+  font-size: 46px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.home-body .vinyl {
+  margin: 6px 0 18px;
+  font-family: "Bowlby One", sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -6px;
+  color: #000;
+  -webkit-text-stroke: 8px #f7d63c;
+  paint-order: stroke fill;
+  white-space: nowrap;
+}
+
+.home-body .intro-text p {
+  font-size: 19px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.home-body .intro-photo {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  filter: grayscale(1);
+  background: #ccc;
+  margin-top: 5px;
+}
+
+.home-body .albums {
+  background: #b3352f;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 28px;
+  padding: 115px 40px 170px;
+}
+
+.home-body .album {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.home-body .num {
+  font-family: "Bowlby One", sans-serif;
+  font-size: clamp(36px, 4.5vw, 64px);
+  color: #fff;
+  -webkit-text-stroke: 5px #000;
+  paint-order: stroke fill;
+}
+
+.home-body .album img {
+  width: clamp(150px, 19vw, 280px);
+  height: clamp(150px, 19vw, 280px);
+  object-fit: cover;
+  border: 5px solid #fff;
+  background: #ddd;
+  display: block;
+  transition: transform .15s ease;
+}
+
+.home-body .album:hover img {
+  transform: translateY(-6px);
+}
+
+
+.reviews-body .reviews-banner {
+  min-height: 212px;
+  padding: 22px 14px 25px;
+  color: #ffe5e5;
+  background: #c41f1f;
+  border-bottom: 2px solid #111;
+}
+
+.reviews-body .reviews-banner .the {
+  margin: 0;
+  font-family: "Kabel", "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: .9;
+}
+
+.reviews-body .reviews-banner h1 {
+  margin: 0;
+  font-family: "Kabel", "Bowlby One", sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  line-height: .95;
+  letter-spacing: -3px;
+}
+
+.reviews-body .reviews-page {
+  background: #fff;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 78px 42px 90px;
+}
+
+.reviews-body .review {
+  margin: 0 0 76px;
+  padding: 0;
+  scroll-margin-top: 20px;
+}
+
+.reviews-body .review .photo {
+  display: block;
+  width: min(380px, 100%);
+  height: auto;
+  padding: 10px;
+  margin: 0 0 16px 8px;
+  background: #8750aa;
+}
+
+.reviews-body .review h2 {
+  margin: 0 0 10px 8px;
+  color: #e52e2c;
+  font-family: "Kabel", "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.reviews-body .review p {
+  margin: 0 8px 14px;
+  max-width: 940px;
+  font-family: "Kabel", "Josefin Sans", sans-serif;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: .15px;
+}
+
+.reviews-body .liner-notes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  margin: 28px 18px 32px;
+}
+
+.reviews-body .liner-notes img {
+  display: block;
+  width: 19%;
+  height: auto;
+  padding: 6px;
+  background: #ffd000;
+}
+
+.reviews-body .liner-notes img.wide {
+  width: 28%;
+}
+
+
+@media (max-width: 1250px) {
+  .home-body .intro {
+    flex-wrap: wrap;
+  }
+
+  .home-body .intro-text {
+    flex: 0 0 100%;
+    max-width: 600px;
+  }
+
+  .home-body .intro-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .logo {
+    font-size: clamp(50px, 11vw, 100px);
+  }
+
+  .nav {
+    padding-left: 20px;
+  }
+
+  .home-body .intro-text p.lead {
+    font-size: 38px;
+  }
+
+  .home-body .vinyl {
+    font-size: clamp(75px, 17vw, 120px);
+  }
+
+  .home-body .intro-text p {
+    font-size: 18px;
+  }
+
+  .home-body .albums {
+    padding: 60px 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav a {
+    font-size: 16px;
+    padding: 6px 22px;
+  }
+
+  .reviews-body .reviews-banner {
+    min-height: 160px;
+  }
+
+  .reviews-body .reviews-banner .the {
+    font-size: 30px;
+  }
+
+  .reviews-body .reviews-page {
+    padding: 42px 18px 60px;
+  }
+
+  .reviews-body .review h2 {
+    font-size: 21px;
+  }
+
+  .reviews-body .liner-notes {
+    gap: 10px;
+    margin-inline: 8px;
+  }
+
+  .reviews-body .liner-notes img {
+    width: 25%;
+    padding: 4px;
+  }
+
+  .reviews-body .liner-notes img.wide {
+    width: 38%;
+  }
+
+  .reviews-body .review p {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
